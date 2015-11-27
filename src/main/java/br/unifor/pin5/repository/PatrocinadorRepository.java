@@ -9,5 +9,5 @@ import br.unifor.pin5.entity.Patrocinador;
 
 public interface PatrocinadorRepository extends JpaRepository<Patrocinador, Integer> {
 
-  
+	List<Patrocinador> findByObra(Obra obra);
 }

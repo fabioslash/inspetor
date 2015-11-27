@@ -10,6 +10,6 @@ import br.unifor.pin5.entity.User;
 public interface ObraRepository extends JpaRepository<Obra, Integer>{
 
 	
-	
+	List<Obra> findByUser(User user);
 
 }
