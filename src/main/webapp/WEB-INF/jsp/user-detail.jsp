@@ -8,37 +8,44 @@
 
 <h1>${user.name}</h1>
 
-<c:forEach items="${user.obras}" var="obra" >
-
-  <div class="row">
-  <div class="col-xs-9">Governo federal</div>
-  </div>
 
 
-   <h2>Descrição da Obra: ${obra.description}</h2>
-   <h3>Objetivo: ${obra.objective}</h3>
-   <h3>Cidade:  ${obra.city}</h3>
-   <h3>Estado:  ${obra.state}</h3>
+
+
+<c:forEach items="${user.obras}" var="obra">
+
+  <table id="tabelaspec">
    
-   <table class="table table-bordered table-hover table-striped">
-     <thead>
-      <tr>
-         <th>Patrocinadores</th>
-        
-      </tr>
-    </thead>  
-    
-    <tbody>
-       <c:forEach items="${obra.patrocinadores}" var="patrocinador" >
+   <tr><td colspan="2" class="alc">Governo federal</td></tr>
+   <tr><td colspan="2" ></td></tr>
+
+   
+   <tr><td colspan="2" class="alr"> ${obra.description}</td></tr>
+   <tr><td colspan="2" class="alr"></td></tr>
+   <tr><td colspan="2" class="alr"></td></tr>
+   
+   <tr>
+     <td class="ale">Objetivo: ${obra.objective}</td>
+     <td class="ale">Valor: ${obra.money}</td>
+   </tr>
+   <tr>
+   <td class="ale">Cidade:  ${obra.city}</td>
+   <td class="ale">Estado:  ${obra.state}</td>
+   </tr>
+   <tr>
+   <td class="ale">Data Inicial:  ${obra.publishedDate}</td>
+   <td class="ale">Data Final:  ${obra.finalDate}</td>
+   </tr>
+   
+   <tr>
+   <c:forEach items="${obra.patrocinadores}" var="patrocinador" >
           <tr>
-             <td>${patrocinador.nome}</td>
+             <td colspan="2" class="alc" >${patrocinador.nome}</td>
              
           </tr>
        
        </c:forEach>
-    </tbody>
-    
-   </table>
+   </tr>
    
 
 

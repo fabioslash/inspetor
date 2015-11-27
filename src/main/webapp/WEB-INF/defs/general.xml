@@ -30,11 +30,17 @@
 		<put-attribute name="body" value="/WEB-INF/jsp/user-register.jsp" />
 		<put-attribute name="current" value="register" />
 	</definition>
-	
+
 	<definition name="login" extends="common">
 		<put-attribute name="title" value="login" />
 		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
 		<put-attribute name="current" value="login" />
+	</definition>
+
+	<definition name="account" extends="common">
+		<put-attribute name="title" value="Conta do usuário" />
+		<put-attribute name="body" value="/WEB-INF/jsp/user-account.jsp" />
+		<put-attribute name="current" value="account" />
 	</definition>
 
 </tiles-definitions>

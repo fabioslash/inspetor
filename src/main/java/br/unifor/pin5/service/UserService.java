@@ -70,5 +70,14 @@ public class UserService {
 
 		userRepository.save(user);
 	}
+
+	public User findOneWithObras(String name) {
+		 User user = userRepository.findByName(name); 
+			return findOneWithObras(user.getId());
+	}
+
+	public User findOne(String username) {
+		return userRepository.findByName(username);
+	}
 	
 }

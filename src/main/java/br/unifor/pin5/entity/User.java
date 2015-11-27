@@ -13,6 +13,8 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Email;
 
+import br.unifor.pin5.annotation.UniqueUsername;
+
 @Entity
 public class User{
 
@@ -23,6 +25,7 @@ public class User{
 
 	@Size(min= 3, message = "Nome precisa ter mais de 3 caracteres!")
 	@Column(unique = true)
+	@UniqueUsername(message = "Usuário já existe")
 	private String name;
 
 	@Size(min = 1, message = "Email inválido")

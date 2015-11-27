@@ -6,6 +6,8 @@ import br.unifor.pin5.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Integer>{
 
+	User findByName(String name);
+
 	
 
 
